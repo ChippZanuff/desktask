@@ -11,6 +11,9 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,3 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/desk', 'DeskController@index')->name('desk')->middleware('auth');
+Route::post('/create', 'DeskController@createDeskItem')->name('create')->middleware('auth');
+Route::post('/delete', 'DeskController@deleteDeskItem')->name('delete')->middleware('auth');
+Route::post('/edit', 'EditDeskController@index')->name('edit')->middleware('auth');
+Route::post('/editItem', 'EditDeskController@EditDeskItem')->name('editItem')->middleware('auth');
