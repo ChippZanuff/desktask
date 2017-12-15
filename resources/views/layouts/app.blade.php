@@ -76,5 +76,22 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img-preview').attr('src', e.target.result);
+                    $('#img-preview').toggle();
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#image").change(function(){
+            readURL(this);
+        });
+    </script>
 </body>
 </html>

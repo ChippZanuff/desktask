@@ -7,3 +7,24 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+.img-container{
+  height: auto;
+  width: 300px;
+}
+
+.desk-item{
+  height: auto;
+  margin: 40px 0 0 0;
+}
+
+.row-title{
+  margin-bottom: 20px;
+}
+
+#img-preview{
+  height: 50px;
+  width: 70px;
+  display: none;
+}

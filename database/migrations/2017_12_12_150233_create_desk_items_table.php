@@ -19,6 +19,7 @@ class CreateDeskItemsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('image_path');
+            $table->integer('queue_order')->default(1);
             $table->timestamps();
         });
 
