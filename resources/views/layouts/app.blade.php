@@ -63,6 +63,9 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+                                    <li>
+                                        <a href="{{ route('cabinet') }}">Cabinet</a>
+                                    </li>
                                 </ul>
                             </li>
                         @endguest
@@ -91,6 +94,16 @@
         }
         $("#image").change(function(){
             readURL(this);
+        });
+    </script>
+
+    <script>
+        $('#password_change_btn').click(function() {
+            $('#password_change').slideToggle( "fast" );
+        });
+
+        $('#email_change_btn').click(function() {
+            $('#email_change').slideToggle( "fast" );
         });
     </script>
 </body>
